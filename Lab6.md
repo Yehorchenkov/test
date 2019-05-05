@@ -74,7 +74,7 @@ apply(mat,2,sort)
 > apply(mat,2,function(x) sum(x>2)>0)
 [1] FALSE FALSE  TRUE  TRUE FALSE
 ##return logical values where TRUE-when column has values more than 2 and FALSE- when column doesn't consist values that more than 2
-```R
+```
 8. Створить список list1 <- list(observationA = c(1:5, 7:3), observationB = matrix(1:6, nrow=2)). Для цього списку знайдіть sum за допомогою lapply.
 ```R
 > list1 <- list(observationA = c(1:5, 7:3), observationB = matrix(1:6, nrow=2))
