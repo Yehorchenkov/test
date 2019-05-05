@@ -1,9 +1,8 @@
-```R
-```
+
 1. Створити матрицю mat з 5 стовпцями та 10 строками за допомогою
 matrix з випадковими даними (функція rnorm(50)).
+
 ```R
-```
 > mat <- matrix(rnorm(50), 10,5)
 ##was created mat with help of function matrix with random values
 > mat
@@ -19,38 +18,32 @@ matrix з випадковими даними (функція rnorm(50)).
 [9,] -0.533305515  0.63091964 -0.92325020 -0.590775931 -0.914728525
 [10,]  0.389134252  0.92548369 -0.44298234  1.550165507  1.122814922
 ##showed how works matrix function
-```R
 ```
+
 2. Знайти максимальне значення в кожному стовпці.
+
 ```R
-```
 > apply(mat, 2, max)
 [1] 1.831444 1.411853 2.330450 2.127973 1.122815
 ##with help of apply function was founded max values of all column of matrix mat
 ##in function value 2 mean column
-```R
 ```
 3. Знайти середнє (mean) значення кожного стовпця.
 ```R
-```
 apply(mat, 2, mean)
 [1]  0.29669013  0.24938394 -0.04247249 -0.31586694 -0.02928065
 ##with help of apply function was founded mean values of all column of matrix mat
 ##in function value 2 means column
-```R
 ```
 4. Знайти мінімальне значення в кожному рядку.
 ```R
-```
 > apply(mat, 1, min)
 [1] -0.5181406 -1.5639211 -1.5751954 -0.8984147 -2.2152848 -0.5466976
 [7] -1.9875454 -0.6053959 -0.9232502 -0.4429823
 ##above an example of using columnmin function where 1 means that we use rows of matrix
-```R
 ```
 5. Відсортувати кожен стовбець таблиці.
 ```R
-```
 apply(mat,2,sort)
 [,1]        [,2]        [,3]         [,4]         [,5]
 [1,] -1.259509930 -1.56392114 -1.57519541 -2.215284801 -1.110550973
@@ -64,21 +57,17 @@ apply(mat,2,sort)
 [9,]  1.371689826  0.94971926  1.46654037  1.550165507  0.508167291
 [10,]  1.831444072  1.41185324  2.33045013  2.127973077  1.122814922
 ##function apply helped to sort values in each column of matrix mat
-```R
 ```
 6. Знайти кількість значень < 0 для кожного стовпця. Використати свою
 функцію.
 ```R
-```
 > apply(mat,2,function(x) sum(x<0))
 [1] 3 3 7 8 4
 ##with help of function apply was founded numbers of values that less than zero
-```R
 ```
 7. Вивести вектор з булевими значеннями TRUE та FALSE. TRUE, якщо в
 стовпці є елементи >2, FALSE – якщо немає.
 ```R
-```
 > apply(mat,2,function(x) sum(x>2))
 [1] 0 0 1 1 0
 ##was showed that function apply return values that more than 2
@@ -86,10 +75,8 @@ apply(mat,2,sort)
 [1] FALSE FALSE  TRUE  TRUE FALSE
 ##return logical values where TRUE-when column has values more than 2 and FALSE- when column doesn't consist values that more than 2
 ```R
-```
 8. Створить список list1 <- list(observationA = c(1:5, 7:3), observationB = matrix(1:6, nrow=2)). Для цього списку знайдіть sum за допомогою lapply.
 ```R
-```
 > list1 <- list(observationA = c(1:5, 7:3), observationB = matrix(1:6, nrow=2))
 ##was created list1 with help of some cinditions of different observations
 > list1
@@ -115,12 +102,10 @@ $observationA
 $observationB
 [1] 21
 ##with help of function lapply was found sum of A and B observations
-```R
 ```
 9. Для кожного елементу списку list1 знайдіть максимальне та мінімальне
 значення (range) за допомогою lapply та sapply.
 ```R
-```
 > lapply(list1, min)
 $observationA
 [1] 1
@@ -143,12 +128,10 @@ observationA observationB
 7            6 
 ##was used sapply function
 ##each of this functions have the same result
-```R
 ```
 10.Для вбудованого набору даних InsectSprays знайти середнє count для
 кожного spray.
 ```R
-```
 > g <- split(InsectSprays$count, InsectSprays$spray)
 ##split the "count" values into six groups based on types of sprays
 > g
@@ -192,5 +175,4 @@ $E
 $F
 [1] 16.66667
 ##calculated mean value of every type of spray with help of two functions:sapply and apply that have the same result
-```R
 ```
